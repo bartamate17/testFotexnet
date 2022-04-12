@@ -1,15 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mohave:wght@500&family=Noto+Sans&family=Ranga&display=swap');
-
-/*
-    font-family: 'Bebas Neue', cursive;
-
-    font-family: 'Mohave', sans-serif;
-
-    font-family: 'Noto Sans', sans-serif;
-
-    font-family: 'Ranga', cursive;
-*/
-
 * {
     box-sizing: border-box;
 }
@@ -34,7 +23,7 @@ hr:last-child {
 
 #headerStyle {
     background-color: #252627;
-    padding: 30px 170px;
+    padding: 30px 270px;
 }
 
 a:hover {
@@ -43,23 +32,20 @@ a:hover {
 
 .img-fluid {
     max-height: 70px;
-    min-height: 40px;
-    display: block;
-    max-width: 100%;
-    min-width: 160px;
+    min-width: 200px;
 }
 
 #headerStyle h1 {
-    font-size: 2vw !important;
+    font-size: 40px;
     text-shadow: 0 0 20px rgba(0, 0, 0, .9);
     color: #fff9fb;
 }
 
 .labelDiv {
-    text-align: center !important;
-    margin: 20px 0;
     font-size: 20px;
     font-family: 'Noto Sans', sans-serif;
+    text-align: center !important;
+    margin: 20px 0;
     font-weight: 400;
 }
 
@@ -83,6 +69,8 @@ form {
 }
 
 #optionButton {
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .9);
     font-family: 'Noto Sans', sans-serif;
     color: #fff9fb;
     background-color: #ee2a28;
@@ -91,8 +79,6 @@ form {
     width: 10% !important;
     height: 55px;
     border-radius: 50px;
-    font-size: 20px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, .9);
 }
 
 #optionButton:hover {
@@ -107,7 +93,7 @@ form {
 
 .grid-containerHeader {
     display: grid;
-    grid-template-columns: 180px 300px auto;
+    grid-template-columns: 180px auto auto auto;
     padding: 15px 280px;
     text-transform: uppercase;
     font-size: 20px !important;
@@ -116,7 +102,8 @@ form {
 }
 
 .grid-containerHeader img {
-    padding: 14px;
+    margin: 14px;
+    padding-left: 27px;
 }
 
 .nameChannel {
@@ -151,6 +138,77 @@ form {
 }
 
 .errorDiv {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
     text-align: center;
     color: white;
+    background-color: #ee2a28;
+    padding: 120px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .9);
+}
+
+
+/* RESPONSIVITY */
+
+@media only screen and (max-width: 1366px) {
+    .grid-containerHeader {
+        grid-template-columns: 200px 200px 120px 120px;
+        padding: 0 150px;
+    }
+    .grid-container {
+        grid-template-columns: 200px 200px 120px 120px;
+    }
+    #optionButton {
+        width: 230px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Phone */
+    #headerStyle {
+        padding: 25px;
+    }
+    .img-fluid {
+        width: 200px;
+    }
+    #headerStyle h1 {
+        font-size: 25px;
+    }
+    #optionButton {
+        width: 220px !important;
+    }
+    #optionCalendar {
+        width: 180px;
+    }
+    .optionChannel {
+        max-width: 180px;
+    }
+    .grid-containerHeader {
+        column-gap: 120px;
+        grid-template-columns: auto auto;
+        margin: 0 auto;
+        padding: 30px;
+    }
+    .grid-containerHeader img {
+        margin: 0;
+        padding-left: 0;
+    }
+    .nameChannel {
+        margin-top: 0;
+    }
+    .nameChannel:nth-child(2) {
+        display: block;
+    }
+    .nameChannel:nth-child(3),
+    .nameChannel:nth-child(4) {
+        display: none !important;
+    }
+    .grid-container {
+        display: block;
+        padding: none;
+    }
+    .card-footer:last-child {
+        font-size: 11px;
+        height: 20px;
+    }
 }
