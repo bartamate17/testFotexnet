@@ -24,5 +24,5 @@ TELEPÍTÉSI LEÍRÁS
   `channelUrl` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-* 4 - Nyissa meg az index.php file-t
+* 4 - Nyissuk meg az index.php file-t
 
